@@ -1,0 +1,29 @@
+.logo-head {
+  @include logo-fonts();
+  color: $primary-text-color;
+
+  & .blue {
+    color: $accent-text-color;
+  }
+}
+
+.logo-foot {
+  @include logo-fonts();
+  color: $primary-white-color;
+  display: inline-block;
+  margin-bottom: 20px;
+
+  & .blue {
+    color: $accent-text-color;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .logo-head {
+    @include logo-fonts(26, 1.2);
+  }
+
+  .logo-foot {
+    @include logo-fonts(26, 1.2);
+  }
+}

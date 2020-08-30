@@ -1,0 +1,104 @@
+.team {
+  background-color: $secondary-bg-color;
+
+  & .photo {
+    margin-bottom: 30px;
+  }
+
+  & .name {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.19;
+
+    margin-top: 0;
+    margin-bottom: 10px;
+    text-align: center;
+  }
+  & .rank {
+    color: $secondary-text-color;
+
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.19;
+
+    margin-top: 0;
+    margin-bottom: 16px;
+    text-align: center;
+  }
+}
+
+.team-box {
+  display: flex;
+  flex-direction: column;
+  // justify-content: center;
+}
+
+.team-box > .item {
+  background-color: $primary-white-color;
+  box-shadow: 0px 2px 1px rgba(0, 0, 0, 0.2), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 1px 3px rgba(0, 0, 0, 0.12);
+  border-radius: 0px 0px 4px 4px;
+
+  &:not(:last-child) {
+    margin-bottom: 30px;
+  }
+}
+
+.team-social.list {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 24px;
+}
+
+.team-social .button-social {
+  @include social-buttons(transparent, $button-company-color);
+
+  &:hover,
+  &:focus {
+    fill: $primary-white-color;
+    background-color: $accent-text-color;
+    cursor: pointer;
+  }
+}
+
+//TABLET
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+  .team-box {
+    // outline: 2px solid red;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  .team-box > .item {
+    width: 354px;
+    margin-right: 30px;
+
+    &:nth-child(2n) {
+      margin-right: 0;
+    }
+
+    &:last-child {
+      margin-bottom: 30px;
+    }
+  }
+}
+
+//DESKTOP
+@media screen and (min-width: 1200px) {
+  .team-box {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: center;
+  }
+
+  .team-box > .item {
+    &:not(:last-child) {
+      margin-right: 30px;
+    }
+    &:last-child {
+      margin-bottom: 30px;
+    }
+  }
+}
